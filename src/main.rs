@@ -9,7 +9,29 @@ fn hello_test() {
 
 #[test]
 fn test_variable() {
-    let name = "muhammad dwi susanto";
+    let name= "muhammad dwi susanto";
     println!("Hello, {}", name);
+    let mut age = 20;
+    println!("age: {}", age);
+    age = 21;
+    println!("age: {}", age);
+}
+
+#[test]
+fn shadowing() {
+    let name = "dwi";
+    println!("name: {}", name);
+    let name = "susanto";
+    println!("name: {}", name);
+}
+
+#[test]
+fn comment() {
+    // ini adalah comment
+    /*
+    ini adalah comment
+    yang lebih dari satu baris
+    */
+    println!("Hello, comment!");
 }
 
