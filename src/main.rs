@@ -97,3 +97,22 @@ fn augmented_assignment() {
     a %= 3;
     println!("a: {}", a);
 }
+
+#[test]
+fn boolean_comparison() {
+    let is_true: bool = true;
+    let is_false: bool = false;
+    println!("is_true: {}, is_false: {}", is_true, is_false);
+    let is_greater: bool = 10 > 5;
+    println!("is_greater: {}", is_greater);
+    let is_less: bool = 10 < 5;
+    println!("is_less: {}", is_less);
+    let is_equal: bool = 10 == 10;
+    println!("is_equal: {}", is_equal);
+    let is_not_equal: bool = 10 != 5;
+    println!("is_not_equal: {}", is_not_equal);
+    let is_greater_equal: bool = 10 >= 5;
+    println!("is_greater_equal: {}", is_greater_equal);
+    let is_less_equal: bool = 10 <= 5;
+    println!("is_less_equal: {}", is_less_equal);
+}
