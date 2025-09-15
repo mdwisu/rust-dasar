@@ -116,3 +116,15 @@ fn boolean_comparison() {
     let is_less_equal: bool = 10 <= 5;
     println!("is_less_equal: {}", is_less_equal);
 }
+
+#[test]
+fn operator_boolean(){
+    let a: bool = true;
+    let b: bool = false;
+    let c: bool = a && b;
+    println!("a && b = {}", c);
+    let d: bool = a || b;
+    println!("a || b = {}", d);
+    let e: bool = !a;
+    println!("!a = {}", e);
+}
