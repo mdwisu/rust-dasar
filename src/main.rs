@@ -151,3 +151,17 @@ fn tuple() {
     let is_married2 = person.2;
     println!("name: {}, age: {}, is_married: {}", name2, age2, is_married2);
 }
+
+#[test]
+fn unit() {
+    println!("Hello, unit!");
+}
+
+#[test]
+fn test_unit() {
+    let result = unit();
+    println!("result: {:?}", result);
+
+    let test: () = ();
+    println!("test: {:?}", test);
+}
