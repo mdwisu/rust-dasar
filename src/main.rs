@@ -128,3 +128,26 @@ fn operator_boolean(){
     let e: bool = !a;
     println!("!a = {}", e);
 }
+
+#[test]
+fn character() {
+    let a: char = 'a';
+    let b: char = 'b';
+    let c: char = 'c';
+    println!("a: {}, b: {}, c: {}", a, b, c);
+    let d: char = '😊';
+    println!("d: {}", d);
+}
+
+#[test]
+fn tuple() {
+    let mut person: (&str, u8, bool) = ("dwi", 20, false);
+    println!("person: {:?}", person);
+    let (name, age, is_married) = person;
+    println!("name: {}, age: {}, is_married: {}", name, age, is_married);
+    person.0 = "susanto";
+    let name2 = person.0;
+    let age2 = person.1;
+    let is_married2 = person.2;
+    println!("name: {}, age: {}, is_married: {}", name2, age2, is_married2);
+}
