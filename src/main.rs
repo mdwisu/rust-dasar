@@ -65,3 +65,35 @@ fn number_conversion() {
     let d: i32 = c as i32;
     println!("d: {}", d);
 }
+
+#[test]
+fn numeric_operations() {
+    let a: i32 = 10;
+    let b: i32 = 20;
+    let c: i32 = a + b;
+    println!("a + b = {}", c);
+    let d: i32 = a - b;
+    println!("a - b = {}", d);
+    let e: i32 = a * b;
+    println!("a * b = {}", e);
+    let f: i32 = b / a;
+    println!("b / a = {}", f);
+    let g: i32 = b % a;
+    println!("b % a = {}", g);
+}
+
+#[test]
+fn augmented_assignment() {
+    let mut a: i32 = 10;
+    println!("a: {}", a);
+    a += 5;
+    println!("a: {}", a);
+    a -= 3;
+    println!("a: {}", a);
+    a *= 2;
+    println!("a: {}", a);
+    a /= 4;
+    println!("a: {}", a);
+    a %= 3;
+    println!("a: {}", a);
+}
