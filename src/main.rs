@@ -324,3 +324,14 @@ fn string_trim() {
     let trimmed_name = name.trim();
     println!("trimmed_name: '{}'", trimmed_name);
 }
+
+#[test]
+fn string_type() {
+    let name: &str = "dwi susanto"; // string slice
+    let mut greeting: String = String::from("Hello, "); // owned string
+    greeting.push_str(name);
+    println!("greeting: {}", greeting);
+
+    let muhammad = name.replace("dwi", "muhammad");
+    println!("Hello, {}", muhammad);
+}
