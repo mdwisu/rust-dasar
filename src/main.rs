@@ -299,3 +299,28 @@ fn inner_function() {
     let b = 20;
     println!("b di inner function: {}", b);
 }
+
+#[test]
+fn stack_heap() {
+    function_a();
+    function_b();
+}
+
+fn function_a() {
+    let a = 10;
+    let b = String::from("Hello");
+    println!("a: {}, b: {}", a, b);
+}
+
+fn function_b() {
+    let a = 20;
+    let b = String::from("World");
+    println!("a: {}, b: {}", a, b);
+}
+
+#[test]
+fn string_trim() {
+    let name = "   dwi susanto   ";
+    let trimmed_name = name.trim();
+    println!("trimmed_name: '{}'", trimmed_name);
+}
