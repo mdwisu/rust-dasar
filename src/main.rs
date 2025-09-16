@@ -335,3 +335,24 @@ fn string_type() {
     let muhammad = name.replace("dwi", "muhammad");
     println!("Hello, {}", muhammad);
 }
+
+#[test]
+fn ownership() {
+    let name = String::from("dwi susanto");
+    println!("name: {}", name);
+
+    let new_name = name;
+    // println!("name: {}", name); // error: value borrowed here after move
+    println!("new_name: {}", new_name);
+
+    let another_name = new_name.clone();
+    println!("new_name: {}", new_name);
+    println!("another_name: {}", another_name);
+}
+
+#[test]
+fn copy() {
+    let x = 10;
+    let y = x;
+    println!("x: {}, y: {}", x, y);
+}
