@@ -239,3 +239,63 @@ fn constant() {
     println!("MAX_POINTS: {}", MAX_POINTS);
     println!("APP_NAME: {}", APP_NAME);
 }
+
+#[test]
+fn variable_scope() {
+    // Outer scope
+    let outer_var = "outer";
+    println!("outer_var: {}", outer_var);
+
+    {
+        // Inner scope
+        let inner_var = "inner";
+        println!("outer_var di inner scope: {}", outer_var);
+        println!("inner_var: {}", inner_var);
+    }
+
+    // Error: inner_var tidak bisa diakses di sini
+    // println!("inner_var: {}", inner_var);
+    println!("outer_var di outer scope: {}", outer_var);
+}
+
+#[test]
+fn scope_with_shadowing() {
+    let x = 5;
+    println!("x awal: {}", x);
+
+    {
+        let x = x + 1;
+        println!("x di inner scope: {}", x);
+    }
+
+    println!("x di outer scope: {}", x);
+}
+
+#[test]
+fn scope_with_mutability() {
+    let mut x = 5;
+    println!("x awal: {}", x);
+
+    {
+        x = x + 1;
+        println!("x di inner scope: {}", x);
+    }
+
+    println!("x di outer scope: {}", x);
+}
+
+#[test]
+fn function_scope() {
+    let a = 10;
+    println!("a di main: {}", a);
+
+    inner_function();
+
+    // Error: b tidak bisa diakses di sini
+    // println!("b: {}", b);
+}
+
+fn inner_function() {
+    let b = 20;
+    println!("b di inner function: {}", b);
+}
