@@ -165,3 +165,77 @@ fn test_unit() {
     let test: () = ();
     println!("test: {:?}", test);
 }
+
+#[test]
+fn array() {
+    let numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("numbers: {:?}", numbers);
+
+    let first = numbers[0];
+    println!("first: {}", first);
+
+    let second = numbers[1];
+    println!("second: {}", second);
+
+    let length = numbers.len();
+    println!("length: {}", length);
+}
+
+#[test]
+fn array_mut() {
+    let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("before: {:?}", numbers);
+
+    numbers[0] = 10;
+    numbers[1] = 20;
+
+    println!("after: {:?}", numbers);
+}
+
+#[test]
+fn array_initialization() {
+    let numbers = [0; 5];
+    println!("zeros: {:?}", numbers);
+
+    let ones = [1; 5];
+    println!("ones: {:?}", ones);
+}
+
+#[test]
+fn two_dimensional_array() {
+    let matrix: [[i32; 3]; 2] = [
+        [1, 2, 3],
+        [4, 5, 6],
+    ];
+    println!("matrix: {:?}", matrix);
+
+    let first_row = matrix[0];
+    println!("first_row: {:?}", first_row);
+
+    let element = matrix[1][2];
+    println!("element: {}", element);
+}
+
+#[test]
+fn array_iteration() {
+    let numbers = [1, 2, 3, 4, 5];
+
+    for num in numbers.iter() {
+        println!("num: {}", num);
+    }
+
+    for i in 0..numbers.len() {
+        println!("numbers[{}]: {}", i, numbers[i]);
+    }
+}
+
+#[test]
+fn constant() {
+    const PI: f64 = 3.14159;
+    const MAX_POINTS: u32 = 100_000;
+    const APP_NAME: &str = "Rust Dasar";
+
+    println!("PI: {}", PI);
+    println!("MAX_POINTS: {}", MAX_POINTS);
+    println!("APP_NAME: {}", APP_NAME);
+}
