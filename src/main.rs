@@ -356,3 +356,26 @@ fn copy() {
     let y = x;
     println!("x: {}, y: {}", x, y);
 }
+
+#[test]
+fn if_expression() {
+    let x = 10;
+
+    if x > 5 {
+        println!("x is greater than 5");
+    } else {
+        println!("x is not greater than 5");
+    }
+
+    let message = if x > 10 {
+        "x is greater than 10"
+    } else if x == 10 {
+        "x equals 10"
+    } else {
+        "x is less than 10"
+    };
+    println!("message: {}", message);
+
+    let y = if x > 5 { 100 } else { 0 };
+    println!("y: {}", y);
+}
